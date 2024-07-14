@@ -1,0 +1,147 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 2%;
+    transition: 0.5s;
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.ham-icon {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box input {
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    max-width: 200px;
+}
+
+.search-box input ::placeholder {
+    color: white;
+}
+
+.search-box img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.dark .navbar {
+    background: #000;
+    color: #fff;
+}
+
+.dark .search-box {
+    background: #fff;
+}
+
+.dark .search-box input {
+    color: #222;
+}
+
+.dark .search-box input ::placeholder {
+    color: #222;
+}
+
+.navSide {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: rgb(58, 82, 58);
+    height: 100vh;
+    width: 250px;
+    animation: slide 0.25s ease-in-out 0s 1;
+}
+
+.cancel {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+@keyframes slide
+{
+    0%{
+        transform: translateX(250px);
+    }
+    100%
+    {
+        transform: translateX(0px);
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 80px;
+        cursor: pointer;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .ham-icon {
+        display: block;
+    }
+
+    .search-box {
+        padding: 4px 8px;
+        border-radius: 12.5px;
+    }
+
+    .search-box input {
+        padding: 2px;
+        font-size: 8px;
+        max-width: 100px;
+    }
+    .toggle-icon {
+        width: 25px;
+        margin-left: 10px;
+    }
+    
+    .ham-icon {
+        width: 20px;
+    }
+}
